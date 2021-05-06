@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+
+<style>
+
+.border
+{
+  height:500px;
+  width:540px;
+  color:black;
+  background-color:Beige;
+  border:5px solid black;
+  border-radius:25px;
+  margin:auto;
+  font-size:20px;
+}
+.button
+{
+  color: white;
+  background-color: LimeGreen;
+  border: 2px solid black;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius:15px;
+  padding: 15px 30px;
+}
+p.space
+{
+  white-space: pre;
+}
+body
+{
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family:Footlight MT Light;
+}
+</style>
+
+<head>
+
+<title>LOGIN_PAGE</title>
+
+</head>
+
+<body background="bg.jpg">
+
+<br><br><br>
+
+<div class="border">
+<form action="LOGOUT.html">
+<center><h1>Login-Form</h1>
+<p>Fill your details to login</p>
+</center>
+<b>
+<p class="space">	Enter your email-id  		:	<input type="email" id = "mail" title="Should be a gmail id (end with gmail.com)" required><br></p>
+<p class="space">	Enter your password  		:	<input type="password" id = "pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Type correct valid password" required><br></p>
+<br><center><button class="button" onclick="lcheck()">Login</button></center><br>
+<hr>
+<p class="space">	Don't have an account?</p></b>
+<center><button class="button" onclick="signup()">Signup</button></center><br>
+
+</form>
+</div>
+
+</body>
+
+<script type="text/javascript">
+
+function lcheck()
+{
+
+  var s1 = document.getElementById("mail").value;
+  
+  if(document.getElementById("mail").value == '')
+  {
+	alert("Please enter your email-id");
+  }
+  if(document.getElementById("mail").value != '')
+  {
+    if(!s1.endsWith("@gmail.com") )
+    {
+  	  alert("invalid email id ");
+    }
+  }
+  if(document.getElementById("mail").value != '')
+  {
+    if(s1.endsWith("@gmail.com") )
+    {
+      if(document.getElementById("pass").value == '')
+      {
+	    alert("Please enter your password");
+      }
+    }
+  }
+}
+function signup()
+{
+  location.replace("SIGNUP.html");
+}
+</script>
+
+</html>

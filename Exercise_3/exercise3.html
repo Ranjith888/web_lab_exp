@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+
+a
+{
+  color: white;
+  text-decoration:none;
+  font-family:Comic Sans MS;
+}
+a:hover
+{
+  text-decoration: underline;
+}
+.open
+{
+  color: black;
+  background-color: Chartreuse;
+  border: 2px solid blue;
+  width: 12em;
+  font-size: 16px;
+  font-family:Comic Sans MS;
+  padding: 5px;
+  cursor: pointer;
+}
+.content
+{
+  display: none;
+  border: 2px solid red;
+  background-color: #f9f9f9;
+  width: 188px;
+}
+.content a
+{
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  border:2px solid red;
+}
+.content a:hover
+{
+  background-color: blueviolet;
+}
+.menulink
+{
+  float:left;
+}
+.menulink:hover .content
+{
+  display: block;
+}
+.menulink:hover .open
+{
+  background-color: green;
+}
+h1,h2,h3
+{
+  font-family:Comic Sans MS;
+  text-align:center;
+  color:white;
+}
+p
+{
+  color:white;
+}
+</style>
+
+<head>
+	<title>Menu Layout</title>
+    <h1>KONGU ENGINEERING COLLEGE</h1>
+    <h2>DEPARTMENT OF ECE</h2>
+    <h3>Welcome You</h3>
+</head>
+
+<body bgcolor="black">
+
+  <center>
+  <img src="html5.jpg" width="100" height="100">
+  
+  <p><a href="https://kongu.ac.in/">Click</a></p>
+
+  <div class="menulink">
+    <button class="open">Menu</button>
+      <div class="content">
+        <a href="#">News</a>
+        <a href="#">Articles</a>
+        <a href="#">Exam Results</a>
+      </div>
+  </div>
+  <div class="menulink">
+    <button class="open">About us</button>
+      <div class="content">
+        <a href="#">Departments</a>
+        <a href="#">Our Vision</a>
+        <a href="#">Rules</a>
+      </div>
+  </div>
+  <div class="menulink">
+    <button class="open">Programmes</button>
+      <div class="content">
+        <a href="#">UG</a>
+        <a href="#">PG</a>
+        <a href="#">Ph.D</a>
+      </div>
+  </div>
+</center>
+
+</body>
+
+</html>

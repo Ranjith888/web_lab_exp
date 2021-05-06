@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+<style>
+
+.border
+{
+  height: 200px;
+  width: 400px;
+  color: black;
+  background-color: Beige;
+  float: center;
+  margin-top: 10%;
+  border: 2px solid black;
+  border-width: 5px;
+}
+
+.button
+{
+  border-radius: 25px;
+  color: white;
+  background-color: LimeGreen;
+  border: 2px solid black;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px 40px;
+  cursor: pointer;
+  font-family:Comic Sans MS;
+}
+body
+{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+
+<head>
+	<title>INSIDE</title>
+</head>
+
+<body background="bg.jpg">
+
+<center>
+<h1>Login Successful</h1><hr>
+<div class="border"><br><br><br>
+<center><button class="button" onclick="myfunction()">Logout</button></center><br>
+</div>
+</center>
+
+<script>
+
+function myfunction()
+{
+  location.replace("LOGIN.html")
+}
+
+</script>
+</body>
+</html>

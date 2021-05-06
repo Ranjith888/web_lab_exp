@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html>
+  <style>
+  
+  .headborder
+  {
+	margin:auto;
+    margin-top:5%;
+	height:100px;
+    width:600px;
+    color:white;
+	border: 5px solid black;
+    border-bottom: none;
+    border-color:orange;
+    background-color:black;
+    font-family:Comic Sans MS;
+  }
+  .bodyborder
+  {
+	margin:auto;
+	height:550px;
+    width:600px;
+    color:white;
+	border: 5px solid black;
+    border-color:orange;
+    background-color:black;
+    font-family:Comic Sans MS;
+  }
+  .button
+  {
+	border: 5px solid orange;
+    border-radius: 15px;
+    background-color:white;
+    font-family:Comic Sans MS;
+    font-size:16px;
+    padding: 15px 30px;
+    cursor:pointer;
+  }
+  table, th, td
+  {
+    border: 0.5px solid black;
+    width:90%;
+    border-color:orange;
+  }
+  
+  </style>
+  
+  <head>
+  	<title>CGPA CALCULATOR</title>
+	<div class = "headborder">
+	<center><h1>SHANJITH CGPA CALCULATOR</h1></center>
+	</div>
+  </head>
+
+  <body style="background-color:MediumTurquoise">
+
+    <div class = "bodyborder">
+	<center>
+	<h3>Enter grade of SEMESTER : 1</h3>
+
+	<form>
+
+	<table>
+	  <tr>
+		<th>Subjects </th>
+		<th>Grade </th>
+		<th>Credits </th>
+	  </tr>
+      
+	  <tr>
+		<td>Digital Electronics</td>
+		<td><input type="text" id="g0" required></td>
+		<td><center>4</center></td>
+	  </tr>
+      
+	  <tr>
+		<td>Solid State Devices and Circuits</td>
+		<td><input type="text" id="g1" required></td>
+		<td><center>4</center></td>
+	  </tr>
+
+	  <tr>
+		<td>Applied Physics</td>
+		<td><input type="text" id="g2" required></td>
+		<td><center>3.5</center></td>
+	  </tr>
+	  <tr>
+		<td>Applied Chemistry</td>
+		<td><input type="text" id="g3" required></td>
+		<td><center>3.5</center></td>
+	  </tr>
+      
+	  <tr>
+		<td>Microprocessor and Microcontroller</td>
+		<td><input type="text" id="g4" required></td>
+		<td><center>3</center></td>
+	  </tr>
+      
+	  <tr>
+		<td>Engineering Drawing</td>
+		<td><input type="text" id="g5" required></td>
+		<td><center>3</center></td>
+	  </tr>
+
+	  <tr>
+		<td>Data Structure with Python</td>
+		<td><input type="text" id="g6" required></td>
+		<td><center>2</center></td>
+	  </tr>
+
+	  <tr>
+		<td>Sensors and its Applications</td>
+		<td><input type="text" id="g7" required></td>
+		<td><center>2</center></td>
+	  </tr>
+      
+	  <tr>
+		<td>Value Education</td>
+		<td><input type="text" id="g8" required></td>
+		<td><center>1</center></td>
+	  </tr>
+
+	  <tr>
+		<td>Programming Skills Training</td>
+		<td><input type="text" id="g9" required></td>
+		<td><center>1</center></td>
+	  </tr>
+
+	</table>
+	<br><br>
+	<button class = "button" onclick = "calculate()">Submit</button>
+
+	</form>
+    
+    </center>
+    
+	</div>
+    
+  </body>
+  
+  <script>
+  
+  	function calculate()
+    {
+      var m = [];
+	  m[0] = document.getElementById("g0").value;
+      m[1] = document.getElementById("g1").value;
+      m[2] = document.getElementById("g2").value;
+      m[3] = document.getElementById("g3").value;
+      m[4] = document.getElementById("g4").value;
+      m[5] = document.getElementById("g5").value;
+      m[6] = document.getElementById("g6").value;
+      m[7] = document.getElementById("g7").value;
+      m[8] = document.getElementById("g8").value;
+      m[9] = document.getElementById("g9").value;
+      var grade = ["O","A","B","C","D"];
+      var mark = [10, 9, 8, 7, 6];
+      var c = [4,4,3.5,3.5,3,3,2,2,1,1];
+      var i, j, sum = 0;
+      for (i = 0; i < 10; i++)
+      {
+        for (j = 0; j < 5; j++)
+        {
+          if (m[i] == grade[j])
+          {
+            sum = sum + (mark[j]*c[i]);
+          }
+        }
+      }
+      sum = sum/27;
+      if ((m[0] != '') && (m[1] != '') && (m[2] != '') && (m[3] != '') && (m[4] != '') && (m[5] != '') && (m[6] != '') && (m[7] != '') && (m[8] != '') && (m[9] != ''))
+      {
+        alert("Your cgpa is : "+sum);
+      }
+    }
+  </script>
+
+</html>
